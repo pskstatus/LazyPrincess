@@ -11,13 +11,9 @@ from info import AUTH_CHANNEL, LONG_IMDB_DESCRIPTION, MAX_LIST_ELM, SHORTLINK_UR
 from info import *
 from imdb import IMDb
 import asyncio
-from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
-from pyrogram.errors import FloodWait, UserIsBlocked, MessageNotModified, PeerIdInvalid
+from pyrogram.types import Message, InlineKeyboardButton
 from pyrogram import enums
 from typing import Union
-from Script import script
-import pytz
-import random 
 import re
 import os
 from datetime import datetime
@@ -26,9 +22,6 @@ from database.users_chats_db import db
 from bs4 import BeautifulSoup
 import requests
 import aiohttp
-from shortzy import Shortzy
-import http.client
-import json
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
@@ -38,10 +31,8 @@ BTN_URL_REGEX = re.compile(
 )
 
 imdb = IMDb() 
-TOKENS = {}
-VERIFIED = {}
+
 BANNED = {}
-SECOND_SHORTENER = {}
 SMART_OPEN = '“'
 SMART_CLOSE = '”'
 START_CHAR = ('\'', '"', SMART_OPEN)
