@@ -62,6 +62,7 @@ MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "True")), True)
 PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "True")), False)
 PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "False")), False)
 
+
 #LazyRenamer Configs
 FLOOD = int(environ.get("FLOOD", "10"))
 LAZY_MODE = bool(environ.get("LAZY_MODE"))
@@ -145,6 +146,7 @@ PRIME_DOWNLOADERS = (lazydownloaders) if lazydownloaders else []
 
 # Adding Language Feature : 
 LANGUAGES = ["hindi", "hin", "english", "eng", "korean", "kor", "urdu", "urd","chinese","chin","tamil", "tam", "malayalam", "mal",  "telugu", "tel", "kannada", "kan"]
+SEASONS = ["season 1" , "season 2" , "season 3" , "season 4", "season 5" , "season 6" , "season 7" , "season 8" , "season 9" , "season 10"]
 MAX_B_TN = environ.get("MAX_B_TN", "10")
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
 
@@ -156,11 +158,11 @@ if SELF_DELETE == "True":
 
 # Download Tutorial Button #
 DOWNLOAD_TEXT_NAME = "📥 HOW TO DOWNLOAD 📥"
-DOWNLOAD_TEXT_URL = "https://t.me/LazyDeveloper"
+DOWNLOAD_TEXT_URL = "https://t.me/MnT_Linkss"
 
 # Custom Caption Under Button #
 CAPTION_BUTTON = "Get Updates"
-CAPTION_BUTTON_URL = "https://t.me/LazyDeveloper"
+CAPTION_BUTTON_URL = "https://t.me/MnT_Linkss"
 
 LOG_STR = "Current Cusomized Configurations are:-\n"
 LOG_STR += ("IMDB Results are enabled, Bot will be showing imdb details for you queries.\n" if IMDB else "IMBD Results are disabled.\n")
