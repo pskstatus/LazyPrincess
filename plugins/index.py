@@ -37,7 +37,7 @@ async def index_files(bot, query):
         return await query.answer('Wait until previous process complete.', show_alert=True)
     msg = query.message
 
-    await query.answer('Processing...⏳', show_alert=True)
+    await query.answer('𝓟𝓻𝓸𝓬𝓮𝓼𝓼𝓲𝓷𝓰...⏳', show_alert=True)
     if int(from_user) not in ADMINS:
         await bot.send_message(int(from_user),
                                f'Your Submission for indexing {chat} has been accepted by our moderators and will be added soon.',
@@ -93,9 +93,9 @@ async def send_for_index(bot, message):
             filename = file.file_name
             filesize = humanize.naturalsize(file.file_size) 
             buttons = [
-                [ InlineKeyboardButton("📝✧ S𝚝ar𝚝 Renaming ✧📝", callback_data="rename") ],
-                [ InlineKeyboardButton('📇✧✧  S𝚝ar𝚝 iŋdᗴＸi𝚗g  ✧✧📇',callback_data=f'index#accept#{chat_id}#{last_msg_id}#{message.from_user.id}')],
-                [ InlineKeyboardButton('⨳  Close  ⨳', callback_data='cancel'),]
+                [ InlineKeyboardButton("📝 𝕊𝕥𝕒𝕣𝕥 ℝ𝕖𝕟𝕒𝕞𝕚𝕟𝕘 ♻️", callback_data="rename") ],
+                [ InlineKeyboardButton('📇✧✧  𝕊𝕥𝕒𝕣𝕥 𝕀𝕟𝕕𝕖𝕩𝕚𝕟𝕘 ✧✧📇',callback_data=f'index#accept#{chat_id}#{last_msg_id}#{message.from_user.id}')],
+                [ InlineKeyboardButton('❌ ↔️ 𝘾𝙡𝙤𝙨𝙚 ↔️ ❌', callback_data='cancel'),]
             ]
             reply_markup = InlineKeyboardMarkup(buttons)
             return await message.reply(
@@ -109,7 +109,7 @@ async def send_for_index(bot, message):
                                          callback_data=f'index#accept#{chat_id}#{last_msg_id}#{message.from_user.id}')
                 ],
                 [
-                    InlineKeyboardButton('⨳  Close  ⨳', callback_data='close_data'),
+                    InlineKeyboardButton('❌ ↔️ 𝘾𝙡𝙤𝙨𝙚 ↔️ ❌', callback_data='close_data'),
                 ]
             ]
             reply_markup = InlineKeyboardMarkup(buttons)
@@ -142,8 +142,8 @@ async def send_for_index(bot, message):
         if message.from_user.id in LAZY_RENAMERS:
             k = await message.reply('🎉\n\n\n❤️ Thank You For the Contribution, Wait For My Moderators to verify the files.\n\n\n🎁')
             buttons = [
-                        [InlineKeyboardButton("📝✧✧ S𝚝ar𝚝 Renaming ✧✧📝", callback_data="rename") ],
-                        [InlineKeyboardButton('⨳  Close  ⨳', callback_data='cancel')]]
+                        [InlineKeyboardButton("📝 𝕊𝕥𝕒𝕣𝕥 ℝ𝕖𝕟𝕒𝕞𝕚𝕟𝕘 ♻️", callback_data="rename") ],
+                        [InlineKeyboardButton('❌ ↔️ 𝘾𝙡𝙤𝙨𝙚 ↔️ ❌', callback_data='cancel')]]
             reply_markup = InlineKeyboardMarkup(buttons)
             file = getattr(message, message.media.value)
             filename = file.file_name
@@ -157,8 +157,8 @@ async def send_for_index(bot, message):
         else :      
             await message.reply('🎉\n\n\n❤️ Thank You For the Contribution, Wait For My Moderators to verify the files.\n\n\n🎁')
             buttons = [
-                        [InlineKeyboardButton("📝✧✧ S𝚝ar𝚝 Renaming ✧✧📝", callback_data="requireauth") ],
-                        [InlineKeyboardButton('⨳  Close  ⨳', callback_data='cancel')]]
+                        [InlineKeyboardButton("📝 𝕊𝕥𝕒𝕣𝕥 ℝ𝕖𝕟𝕒𝕞𝕚𝕟𝕘 ♻️", callback_data="requireauth") ],
+                        [InlineKeyboardButton('❌ ↔️ 𝘾𝙡𝙤𝙨𝙚 ↔️ ❌', callback_data='cancel')]]
             reply_markup = InlineKeyboardMarkup(buttons)
             file = getattr(message, message.media.value)
             filename = file.file_name
