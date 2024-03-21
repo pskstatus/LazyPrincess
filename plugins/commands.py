@@ -23,7 +23,7 @@ async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [
             [
-                InlineKeyboardButton('🔔 Updates 🤖', url='https://t.me/MnT_Linkss')
+                InlineKeyboardButton('🔔 𝗡𝗲𝘄 𝗨𝗽𝗱𝗮𝘁𝗲𝘀 🤖', url='https://t.me/ManaEntertainmentTelugu')
             ],
             [
                 InlineKeyboardButton('🙆🏻 Help 🦾', url=f"https://t.me/{temp.U_NAME}?start=help"),
@@ -47,18 +47,18 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('➕↖️ Add Me To Your Groups ↗️➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('➕💪 𝘼𝙙𝙙 𝙈𝙚 𝙏𝙤 𝙔𝙤𝙪𝙧 𝙂𝙧𝙤𝙪𝙥𝙨 ⤵➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('🧞‍♀️ Search 🧐', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🔔 Updates 🤖', url='https://t.me/MnT_Linkss')
+            InlineKeyboardButton('📜 𝐌𝐚𝐢𝐧 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 📺', url='https://t.me/MnT_Linkss'),
+            InlineKeyboardButton('🔔 𝗡𝗲𝘄 𝗨𝗽𝗱𝗮𝘁𝗲𝘀 🤖', url='https://t.me/ManaEntertainmentTelugu'),
             ],[
-            InlineKeyboardButton('🙆🏻 Help 🦾', callback_data='help'),
-            InlineKeyboardButton('♥️ About ♥️', callback_data='about')
+            InlineKeyboardButton('🎬 𝓜𝓸𝓿𝓲𝓮 𝓡𝓮𝓺𝓾𝓮𝓼𝓽 1.0 📝', url='https://t.me/+EqutKIHl4vE1Mzll'),
+            InlineKeyboardButton('🎬 𝓜𝓸𝓿𝓲𝓮 𝓡𝓮𝓺𝓾𝓮𝓼𝓽 2.0 📝', url='https://t.me/+EqutKIHl4vE1Mzll')
             ],[
-            InlineKeyboardButton('🔗 More Help', callback_data='leech_url_help'),
-            InlineKeyboardButton('⚙ Open Settings', callback_data='openSettings'),
+            InlineKeyboardButton('🙆🏻 𝖍𝖊𝖑𝖕✍ ', callback_data='help'),
+            InlineKeyboardButton('☸ 𝕬𝖇𝖔𝖚𝖙 ☸', callback_data='about')
             ],[
-            InlineKeyboardButton('⪦ Join Our Group ⪧', url='https://t.me/+mYzQfutLqDg2NzVl')
+            InlineKeyboardButton('🎀𝓒𝓸𝓷𝓽𝓪𝓬𝓽 𝓤𝓼🎀', url='https://t.me/MnTUploaderBot')
             ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -82,7 +82,7 @@ async def start(client, message):
             ],
              [
                 InlineKeyboardButton(
-                    "🦋 Join Our Group 🦋", url='https://t.me/+mYzQfutLqDg2NzVl'
+                    "🦋 Join Our Group 🦋", url='https://t.me/+EqutKIHl4vE1Mzll'
                 )
             ]
         ]
@@ -96,27 +96,26 @@ async def start(client, message):
                 btn.append([InlineKeyboardButton(" 🔄 Try Again", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
         await client.send_message(
             chat_id=message.from_user.id,
-            text="**Please Join My Updates Channel to use this Bot!**",
+            text="**𝐏𝐥𝐞𝐚𝐬𝐞 𝐉𝐨𝐢𝐧 𝐌𝐲 𝐔𝐩𝐝𝐚𝐭𝐞𝐬 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐭𝐨 𝐮𝐬𝐞 𝐭𝐡𝐢𝐬 𝐁𝐨𝐭!**",
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode=enums.ParseMode.MARKDOWN
             )
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton('➕↖️ Add Me To Your Groups ↗️➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('➕💪 𝘼𝙙𝙙 𝙈𝙚 𝙏𝙤 𝙔𝙤𝙪𝙧 𝙂𝙧𝙤𝙪𝙥𝙨 ⤵➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('🧞‍♀️ Search 🧐', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🔔 Updates 🤖', url='https://t.me/MnT_Linkss')
+            InlineKeyboardButton('📜 𝐌𝐚𝐢𝐧 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 📺', url='https://t.me/MnT_Linkss'),
+            InlineKeyboardButton('🔔 𝗡𝗲𝘄 𝗨𝗽𝗱𝗮𝘁𝗲𝘀 🤖', url='https://t.me/ManaEntertainmentTelugu'),
             ],[
-            InlineKeyboardButton('🙆🏻 Help 🦾', callback_data='help'),
-            InlineKeyboardButton('♥️ About ♥️', callback_data='about')
-        ],[
-            InlineKeyboardButton('🔗 More Help ', callback_data='leech_url_help'),
-            InlineKeyboardButton('⚙ Open Settings ', callback_data='openSettings'),
-            ],
-        [
-            InlineKeyboardButton('⪦ Join Our Group ⪧', url='https://t.me/+mYzQfutLqDg2NzVl')
-        ]]
+            InlineKeyboardButton('🎬 𝓜𝓸𝓿𝓲𝓮 𝓡𝓮𝓺𝓾𝓮𝓼𝓽 1.0 📝', url='https://t.me/+EqutKIHl4vE1Mzll'),
+            InlineKeyboardButton('🎬 𝓜𝓸𝓿𝓲𝓮 𝓡𝓮𝓺𝓾𝓮𝓼𝓽 2.0 📝', url='https://t.me/+EqutKIHl4vE1Mzll')
+            ],[
+            InlineKeyboardButton('🙆🏻 𝖍𝖊𝖑𝖕✍ ', callback_data='help'),
+            InlineKeyboardButton('☸ 𝕬𝖇𝖔𝖚𝖙 ☸', callback_data='about')
+            ],[
+            InlineKeyboardButton('🎀𝓒𝓸𝓷𝓽𝓪𝓬𝓽 𝓤𝓼🎀', url='https://t.me/MnTUploaderBot')
+            ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
             photo=random.choice(PICS),
@@ -230,7 +229,7 @@ async def start(client, message):
         pre, file_id = ((base64.urlsafe_b64decode(data + "=" * (-len(data) % 4))).decode("ascii")).split("_", 1)
         try:
             # Create the inline keyboard button with callback_data
-            button = InlineKeyboardButton('▶ Gen Stream / Download Link', callback_data=f'generate_stream_link:{file_id}')
+            button = InlineKeyboardButton('🎀📽 𝓢𝓽𝓻𝓮𝓪𝓶 🎞  /  📥 𝓓𝓸𝔀𝓷𝓵𝓸𝓪𝓭 📥🎀', callback_data=f'generate_stream_link:{file_id}')
             # Create the inline keyboard markup with the button
             keyboard = InlineKeyboardMarkup([[button]])
             msg = await client.send_cached_media(
@@ -267,7 +266,7 @@ async def start(client, message):
     if f_caption is None:
         f_caption = f"{files.file_name}"
 
-    button = InlineKeyboardButton('▶ Gen Stream / Download Link', callback_data=f'generate_stream_link:{file_id}')
+    button = InlineKeyboardButton('🎀📽 𝓢𝓽𝓻𝓮𝓪𝓶 🎞  /  📥 𝓓𝓸𝔀𝓷𝓵𝓸𝓪𝓭 📥🎀', callback_data=f'generate_stream_link:{file_id}')
     # Create the inline keyboard markup with the button
     keyboard = InlineKeyboardMarkup([[button]])
     await client.send_cached_media(
@@ -323,7 +322,7 @@ async def delete(bot, message):
     """Delete file from database"""
     reply = message.reply_to_message
     if reply and reply.media:
-        msg = await message.reply("Processing...⏳", quote=True)
+        msg = await message.reply("𝓟𝓻𝓸𝓬𝓮𝓼𝓼𝓲𝓷𝓰....🗄️", quote=True)
     else:
         await message.reply('Reply to file with /delete which you want to delete', quote=True)
         return
@@ -351,7 +350,7 @@ async def delete(bot, message):
             'mime_type': media.mime_type
             })
         if result.deleted_count:
-            await msg.edit('File is successfully deleted from database')
+            await msg.edit('𝓕𝓲𝓵𝓮 𝓲𝓼 𝓼𝓾𝓬𝓬𝓮𝓼𝓼𝓯𝓾𝓵𝓵𝔂 𝓭𝓮𝓵𝓮𝓽𝓮𝓭 𝓯𝓻𝓸𝓶 𝓭𝓪𝓽𝓪𝓫𝓪𝓼𝓮')
         else:
             # files indexed before https://github.com/LazyDeveloperr/lazyPrincess/commit/f3d2a1bcb155faf44178e5d7a685a1b533e714bf#diff-86b613edf1748372103e94cacff3b578b36b698ef9c16817bb98fe9ef22fb669R39 
             # have original file name.
